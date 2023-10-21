@@ -23,7 +23,7 @@ class Hangman:
         self.num_lives = num_lives # number of lives - can set game dificulty
         self.word_list = word_list # list acting as a word bank for computer to choose from
         self.list_of_guesses = list() # empty list, will hold guesses made by user.
-    
+        print(f"{'-'*60} \n H A N G M A N \n \n number of lives: {self.num_lives} \n \n The mystery word has {self.num_letters} characters \n {self.word_guessed} \n{'-'*60} \n")
     
     def check_guess(self, guess):
         '''
@@ -39,16 +39,15 @@ class Hangman:
         '''
         guess = guess.lower()
         if guess in self.word:
-            print(f"Good guess! {guess} is in the word.")
             for idx in range(len(self.word)):
                 if guess == self.word[idx]:
                     self.word_guessed[idx] = guess
             self.num_letters -= 1
-            print(self.num_letters , self.word_guessed)        
+            print(f"{'-'*60} \n H A N G M A N \n\n Good guess! {guess} is in the word. \n Number of lives: {self.num_lives} \n \n The mystery word has {self.num_letters} characters \n {self.word_guessed} \n{'-'*60} \n")        
         else: 
             self.num_lives -= 1
-            print(f"Sorry, {guess} is not in the word.")
-            print(f"You have {self.num_lives} lives left") 
+            print(f"{'-'*60} \n H A N G M A N \n\n Sorry, {guess} is not in the word. \n Number of lives: {self.num_lives} \n \n The mystery word has {self.num_letters} characters \n {self.word_guessed} \n{'-'*60} \n")
+            
 
 
     def ask_for_input(self):
