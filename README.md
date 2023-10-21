@@ -5,6 +5,9 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 ### How to run the game
 
+1. Download hangman_template.py 
+2. Run the game file in the command line interface and enjoy! 
+
 
 
 ### How it works!
